@@ -1,16 +1,137 @@
+body,html{
+	height: 100%;
+	margin: 0;
+}
+
 header{
-	position: fixed;
+	position:fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .webpage_logo{
-	height: 100px;
-	width:100px;
+	max-height: 20%;
+	max-width: 20%;
+	flex:1;
+}
+
+.nav_header{
+	flex:5;
+}
+
+header h1{
+	color: white;
+	margin: 0px;
+	font-size: 40px;
+}
+
+nav{
+	padding: 0 10px;
+	flex:3;
+}
+
+.nav_header,.webpage_logo{
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+nav ul{
+	display: flex;
+	align-items: stretch;
+}
+
+p{
+	color: black;
+}
+
+
+header ul{
+	display: flex;
+	justify-content: space-between;
 }
 
 nav ul{
 	list-style: none;
+	padding: 0;
+}
+nav li{
+	font-size: 20px;
+	display: inline;
+	color: #ECC312;
 }
 
-nav li{
+.hero_image{
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/stadium.jpg");
+	height:100vh;
+	z-index: -1;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero_text{
+	text-align: center;
+	position: relative;
+	top: 50%;
+	font-size: 20px;
+	color: white;
+} 
+
+main{
+	display: flex;
+	flex-direction: column;
+}
+
+.content , footer{
+	display: flex;
+	align-items: stretch;
+}
+
+.content{
+	height: 70vh;
+	background-color: rgba(179, 212, 254,0.7);
+}
+
+.content p,.content h3{
+	text-align: center;
+}
+
+.content_article{
+	border: 1px solid goldenrod;
+	margin:3px;
+	back
+}
+
+footer{
+	display: flex;
+	flex-direction: column;
+	background-color: #70A288;
+}
+
+.f_link_img,.footer_social{
+	display: flex;
+	justify-content: center;
+}
+
+.f_link_img li, .footer_social li{
+	text-decoration: none;
 	display: inline;
+}
+
+
+
+@media (max-width: 600px){
+	header,.content,footer{
+		flex-direction: column;
+	}
+	nav {
+		width: 100%;
+	}
+	nav ul{
+		justify-content: space-around;
+	}
 }
