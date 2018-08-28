@@ -1,0 +1,16 @@
+header{
+	position: fixed;
+}
+
+.webpage_logo{
+	height: 100px;
+	width:100px;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav li{
+	display: inline;
+}
