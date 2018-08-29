@@ -1,6 +1,7 @@
 body,html{
 	height: 100%;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 header{
@@ -220,17 +221,14 @@ footer ul{
   background: #cb2027;
 }
 
-
-
-
-@media(max-width: 991px){
+@media only screen and (max-width: 991px){
 	nav li{
 		font-size: 24px;
 	}
 }
 
 
-@media (max-width: 768px){
+@media only screen and (max-width: 768px){
 	header{
 		flex-wrap: wrap;
 	}
