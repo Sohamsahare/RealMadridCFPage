@@ -44,8 +44,7 @@ nav li{
 	font-size: 30px;
 	padding-right: 10px;
 	padding-left: 10px;
-	display: inline;
-	color: #002266;
+	color: white;
 }
 
 .nav_link{
@@ -54,12 +53,14 @@ nav li{
 }
 
 .link_1:visited,.link_2:visited,.link_3:visited,.link_4:visited,.link_5:visited{
-	color:white;
+	color:black;
 }
 
 
 .nav_link:hover{
-	color:#ffcc00;}
+	color:#002266;
+	text-decoration: underline;
+}
 
 .hero_image{
 	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/hero.jpg");
@@ -103,22 +104,6 @@ main{
 	background-size: 100%;
 }
 
-
-footer{
-	display: flex;
-	align-items: stretch;
-	justify-content: space-around;
-	height: 20vh;
-	flex-direction: column;
-	background-color:#002266 ;
-}
-
-.f_link{
-	width: 100%;
-	flex:1;
-	display: flex;
-}
-
 .news_article{
 	border: 1px solid silver;
 	margin:3px;
@@ -147,78 +132,104 @@ footer{
 .first_capital{
 	font-size: 1.5em;
 }
-
-footer ul{
-	margin: 0;
-	padding: 0;
-}
-
-.f_link li, .footer_social li{
-	text-decoration: none;
-	flex:1;
-	display: inline;
-}
-
-.footer_links,.footer_social{
+footer{
 	display: flex;
-	align-self: stretch;
+	justify-content: space-between;
+	flex-direction: column;
+	background-color:#e6e6e6 ;
 }
 
-.footer_links li{
-	margin: 10px;
-}
-
-.footer_links li a {
+.footer_social i{
 	text-decoration: none;
-	color: white;
+	min-height: 10%;
+	min-width: 10%;
 }
-.footer_links li a:hover{
+
+.footer_social{
+	padding: 5vh 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	border: 1px solid #9d9d9d;
+}
+
+.footer_links{
+	display: flex;
+	padding: 5vh 0;
+	text-align: center;
+	flex-wrap: wrap;
+	border: 1px solid #9d9d9d;
+}
+
+.footer_links a {
+	text-decoration: none;
+	color: #9d9d9d;
+	font-weight: bold;
+	text-transform: uppercase;
+	flex:1  1 10%;
+}
+.footer_links a:hover{
 	text-decoration: underline;
 }
 
-.link_home:visited ,.link_squad:visited,.link_trophies:visited,.link_news:visited,.link_gallery:visited,.link_highlights:visited,.link_about:visited,.link_contact:visited{
-	color:black;
-} 
-
-.footer_link{
-	background-repeat: no-repeat;
+.f_link{
+	width: 100%;
+	flex:1;
+	display: flex;
+	flex-direction: column;
 }
 
-.fa{
-	padding:10px;
-	font-size: 30px;
-	width: 30;
-	text-decoration: none;
-	border-radius: 30px;
+.madridista{
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow:hidden;
+	background-color: #e6e6e6;
+}
+.madridista_text_banner{
+	position: absolute;
+	width: 75%;
+}
+
+.madridista_text{
 	color: white;
+	font-size: 4vw;
+	width: 100%;
+	position: relative;
+	left: 3%;
 }
 
-.fa-facebook {
-  background: #3B5998;
+.madridista_image{
+	width: 100%;
+	height: auto;
 }
 
-.fa-twitter {
-  background: #55ACEE;
+/* Style the submit button */
+input[type=submit] {
+  background-color: #002266;
+  color: white;
+  border: none;
+  position: relative;
+  left: 3%;
+  padding: 12px;
+  margin: 1px 0;
+  font-weight: bold;
+  font-size: 1.5vw;
 }
 
-.fa-google {
-  background: #dd4b39;
+input[type=submit]:hover {
+    opacity: 0.8;
 }
 
-.fa-tumblr {
-  background: #2c4762;
- }
-
-.fa-youtube {
-  background: #bb0000;
-}
-
-.fa-instagram {
-  background: #125688;
-}
-
-.fa-pinterest {
-  background: #cb2027;
+.fab{
+	margin: 0px 1.3vw;
+	padding:1vw; 
+	font-size: 2vw;
+	text-decoration: none;
+	border-radius:2vw;
+	color: white;
+	background-color: #9d9d9d;
 }
 
 @media only screen and (max-width: 991px){
@@ -231,10 +242,16 @@ footer ul{
 @media only screen and (max-width: 768px){
 	header{
 		flex-wrap: wrap;
+		height: auto;
 	}
 	header,.news,footer{
 		flex-direction: column;
 	}
+
+	.hero_text{
+		font-size: 2.1em;
+	}
+
 	.trophy{
 		max-height: 100vh;
 	}
@@ -242,11 +259,11 @@ footer ul{
 		width: 100%;
 	}
 	nav li{
-		font-size: 20px;
+		flex:1 1 18px;
 	}
 
 	nav ul{
-		justify-content: space-around;
+		justify-content:center;
 	}
 
 	.webpage_logo{
@@ -258,5 +275,27 @@ footer ul{
 		max-width: 50px;
 		height: auto;
 		max-height: 65px;
+	}
+
+	input[type="submit"]{
+		font-size: 2vw;
+		font-weight: normal;
+	}
+
+	.footer_social{
+		justify-content: space-between;
+		padding: 3vh 0;
+	}
+
+	.footer_social i{
+		font-size: 1.5em;
+	}
+
+	.footer_links {
+		flex-direction: column;
+	}
+
+	.footer_links a{
+		margin:1vh 0;
 	}
 }
