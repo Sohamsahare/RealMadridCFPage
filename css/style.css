@@ -8,7 +8,6 @@ body,html{
 	font-family: 'Slabo 27px', serif;
 }
 
-
 .heading{
 	text-align: center;
 	color: white;
@@ -52,6 +51,7 @@ nav{
 	flex:1;
 
 }
+
 nav ul{
 	display: flex;
 	flex-wrap: wrap;
@@ -96,7 +96,6 @@ label{
 .link_1:visited,.link_2:visited,.link_3:visited,.link_4:visited,.link_5:visited{
 	color:black;
 }
-
 
 .nav_link:hover{
 	color:#002266;
@@ -143,9 +142,11 @@ label{
 	background-image: url("../img/black_rma.png");
 	background-size: 100%;
 }
+
 p{
 	color: black;
 }
+
 .news_article{
 	align-items:stretch;
 	border: 1px solid #e6e6e6;
@@ -156,6 +157,7 @@ p{
 	flex-direction: column;
 	background-color:rgba(245, 237, 246, .5);
 }
+
 .article_header{
 	text-align: left;
 	color: black;
@@ -169,13 +171,12 @@ p{
 
 .article_para{
 	flex:1;
-	color: #black;
+	color: black;
 }
 
 .first_capital{
 	font-size: 1.5em;
 }
-
 
 /* Madridista Section */
 .madridista{
@@ -185,6 +186,7 @@ p{
 	overflow:hidden;
 	background-color: #e6e6e6;
 }
+
 .madridista_text_banner{
 	position: absolute;
 	width: 75%;
@@ -243,6 +245,7 @@ footer{
 	text-transform: uppercase;
 	flex:1  1 10%;
 }
+
 .footer_links a:hover{
 	text-decoration: underline;
 }
@@ -255,6 +258,7 @@ footer{
 }
 
 /* Style the submit button */
+
 input[type=submit] {
   background-color: #002266;
   color: white;
@@ -270,6 +274,7 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
+
 /* Style Social buttons */
 
 .fab{
@@ -298,7 +303,6 @@ input[type=submit]:hover {
 		font-size: 24px;
 	}
 }
-
 
 @media only screen and (max-width: 768px){
 	/* Header */
