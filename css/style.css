@@ -1,3 +1,5 @@
+/* Global */
+
 body,html{
 	width: 100%;
 	height: 100%;
@@ -5,6 +7,22 @@ body,html{
 	padding:0;
 	font-family: 'Slabo 27px', serif;
 }
+
+
+.heading{
+	text-align: center;
+	color: white;
+	background-color: black;
+	padding: 10px 0 ;
+	margin:0;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+}
+
+/* Header Section */
 
 header{
 	overflow:hidden;
@@ -45,15 +63,14 @@ nav ul{
 	height: 100%;
 }
 
-p{
-	color: black;
-}
 nav li{
 	font-size: 30px;
 	padding-right: 10px;
 	padding-left: 10px;
 	color: white;
 }
+
+/* Hamburger Menu Button */
 
 label{
 	margin: 0 4vw 0 0;
@@ -86,6 +103,8 @@ label{
 	text-decoration: underline;
 }
 
+/* Hero Section */
+
 .hero_image{
 	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/hero.jpg");
 	height:100vh;
@@ -104,29 +123,18 @@ label{
 	color: white;
 }
 
+/* Trophy Section */
 .trophy{
 	height: auto;
 	width: 100%;
 
 }
 
-.heading{
-	text-align: center;
-	color: white;
-	background-color: black;
-	padding: 10px 0 ;
-	margin:0;
-}
-
-main{
-	display: flex;
-	flex-direction: column;
-}
-
 .news,.trophy_sec{
 	background-color: black;
 }
 
+/* News Section */
 .news{
 	display: flex;
 	align-items: flex-start;
@@ -135,7 +143,9 @@ main{
 	background-image: url("../img/black_rma.png");
 	background-size: 100%;
 }
-
+p{
+	color: black;
+}
 .news_article{
 	align-items:stretch;
 	border: 1px solid #e6e6e6;
@@ -165,6 +175,36 @@ main{
 .first_capital{
 	font-size: 1.5em;
 }
+
+
+/* Madridista Section */
+.madridista{
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow:hidden;
+	background-color: #e6e6e6;
+}
+.madridista_text_banner{
+	position: absolute;
+	width: 75%;
+}
+
+.madridista_text{
+	color: white;
+	font-size: 4vw;
+	width: 100%;
+	position: relative;
+	left: 3%;
+}
+
+.madridista_image{
+	width: 100%;
+	height: auto;
+}
+
+/* Footer Section */
+
 footer{
 	display: flex;
 	justify-content: space-between;
@@ -214,31 +254,6 @@ footer{
 	flex-direction: column;
 }
 
-.madridista{
-	position: relative;
-	width: 100%;
-	display: block;
-	overflow:hidden;
-	background-color: #e6e6e6;
-}
-.madridista_text_banner{
-	position: absolute;
-	width: 75%;
-}
-
-.madridista_text{
-	color: white;
-	font-size: 4vw;
-	width: 100%;
-	position: relative;
-	left: 3%;
-}
-
-.madridista_image{
-	width: 100%;
-	height: auto;
-}
-
 /* Style the submit button */
 input[type=submit] {
   background-color: #002266;
@@ -255,6 +270,7 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
+/* Style Social buttons */
 
 .fab{
 	margin: 0px 1.3vw;
@@ -275,6 +291,8 @@ input[type=submit]:hover {
 	padding: 10px 0;
 }
 
+/* Media Queries */
+
 @media only screen and (max-width: 991px){
 	nav li{
 		font-size: 24px;
@@ -283,6 +301,7 @@ input[type=submit]:hover {
 
 
 @media only screen and (max-width: 768px){
+	/* Header */
 	header{
 		flex-wrap: wrap;
 	}
@@ -290,6 +309,7 @@ input[type=submit]:hover {
 	header,.news,footer{
 		flex-direction: column;
 	}
+	
 
 	nav {
 		width: 100%;
@@ -303,7 +323,8 @@ input[type=submit]:hover {
 	nav ul{
 		justify-content:center;
 	}
-
+	
+	/* Hamburger Menu */
 	label{
 		display: block;
 		position: absolute;
@@ -334,14 +355,18 @@ input[type=submit]:hover {
 		display: flex;
 	}
 
+	/* Hero Section */
 	.hero_text{
 		font-size: 2.1em;
 		top: 50%;
 	}
-
+	
+	/* Trophy Room Section */
 	.trophy{
 		max-height: 100vh;
 	}
+
+	/* NEWS Section */
 
 	.news_article{
 
@@ -349,16 +374,19 @@ input[type=submit]:hover {
 		height: auto;
 	}
 
+	/*
 	.webpage_logo{
-		/* width: 50%; */
-		/* justify-content:space-between; */
+		width: 50%;
+		justify-content:space-between; 
 	}
-	/* 
+	 
 	.webpage_logo img{
 		max-width: 50px;
 		height: auto;
 		max-height: 65px;
 	} */
+
+	/* Footer Section */
 
 	input[type="submit"]{
 		font-size: 2vw;
